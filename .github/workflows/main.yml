@@ -31,8 +31,8 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
       - name: Set PYTHONPATH
-        shell: bash
-        run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
+      shell: bash
+      run: echo "PYTHONPATH=$PWD/geometric_lib" >> $GITHUB_ENV
 
       - name: Run tests
         run: python -m unittest discover -s tests
